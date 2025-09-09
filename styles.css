@@ -14,3 +14,7 @@ html, body { background: #ffffff; }
 .banner-title { color: #1f2d1f; font-weight: 800; font-size: 28px; line-height: 1.2; margin-bottom: 6px; }
 .banner-sub { color: #2f3f2f; font-size: 11px; line-height: 1.5; max-width: 560px; margin: 0 auto 12px; opacity: 0.9; }
 .banner-cta { background: #ffcc33 !important; color: #1f7a3b !important; border: none !important; border-radius: 9999px; height: 28px; min-height: 28px; line-height: 1; padding: 0 14px; font-size: 10px; }
+
+/* Decorative leaves positions */
+.leaf-left { position: absolute; left: 8px; top: 28px; width: 160px; }
+.leaf-right { position: absolute; right: 8px; top: 28px; width: 160px; }

@@ -54,3 +54,36 @@
 			<a href="#shop" class="btn banner-cta">Get Involved</a>
 		</div>
 	</section>
+
+    
+	<!-- Shop Section -->
+	<section id="shop" class="container mx-auto px-4 py-16 lg:py-24">
+		<h2 class="text-3xl lg:text-4xl font-extrabold text-center mb-8">Choose Your Trees</h2>
+
+		<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+			<!-- Categories Sidebar -->
+			<aside class="lg:col-span-2 bg-base-200 rounded-box p-4">
+				<h3 class="text-lg font-bold mb-3">Categories</h3>
+				<div id="category-list" class="flex flex-col gap-2"></div>
+			</aside>
+
+			<!-- Cards & Spinner -->
+			<div class="lg:col-span-8">
+				<div id="spinner" class="flex justify-center py-6 hidden">
+					<span class="loading loading-spinner loading-lg text-primary"></span>
+				</div>
+				<div id="cards-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+			</div>
+
+			<!-- Cart -->
+			<aside class="lg:col-span-2 bg-base-200 rounded-box p-4">
+				<h3 class="text-lg font-bold mb-3">Your Cart</h3>
+				<ul id="cart-list" class="space-y-2"></ul>
+				<div class="mt-4 flex items-center justify-between border-t pt-3">
+					<p class="font-medium">Total:</p>
+					<p class="font-bold">৳<span id="cart-total">0</span></p>
+				</div>
+				<p class="text-xs opacity-70 mt-1">Items: <span id="cart-count">0</span></p>
+			</aside>
+		</div>
+	</section>
