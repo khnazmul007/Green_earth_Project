@@ -1,0 +1,9 @@
+/* Base custom styles for Green Earth */
+
+:root {
+	--banner-image: url('assets/hero-leaf1.png');
+	--mint: #d9f0e3;
+}
+
+/* Global white canvas */
+html, body { background: #ffffff; }
