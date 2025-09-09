@@ -42,7 +42,7 @@
 		</div>
 	</header>
 
-    <!-- Banner -->
+	<!-- Banner -->
 	<section id="banner" class="mint-banner relative overflow-hidden">
 		<!-- Decorative leaves -->
 		<img src="assets/hero-leaf1.png" alt="leaf" class="leaf-left select-none pointer-events-none"/>
@@ -55,7 +55,6 @@
 		</div>
 	</section>
 
-    
 	<!-- Shop Section -->
 	<section id="shop" class="container mx-auto px-4 py-16 lg:py-24">
 		<h2 class="text-3xl lg:text-4xl font-extrabold text-center mb-8">Choose Your Trees</h2>
@@ -88,7 +87,7 @@
 		</div>
 	</section>
 
-    <!-- About Campaign -->
+	<!-- About Campaign -->
 	<section id="about" class="container mx-auto px-4 py-16 lg:py-24">
 		<h2 class="text-3xl lg:text-4xl font-extrabold text-center mb-12">About the Campaign</h2>
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -126,3 +125,45 @@
 			</div>
 		</div>
 	</section>
+
+
+
+	<!-- Plant a Tree Form -->
+	<section id="plant" class="py-16">
+		<div class="container mx-auto px-4">
+			<h2 class="text-3xl lg:text-4xl font-extrabold text-center mb-10">Plant a Tree Today</h2>
+			<form id="pledge-form" class="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 p-6 rounded-box">
+				<input required name="name" type="text" placeholder="Your Name" class="input input-bordered w-full" />
+				<input required name="email" type="email" placeholder="Email Address" class="input input-bordered w-full" />
+				<input required name="count" type="number" min="1" placeholder="Number of Trees" class="input input-bordered w-full md:col-span-2" />
+				<button class="btn md:col-span-2" id="donate-btn">Donate Now</button>
+			</form>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container mx-auto px-4 py-6 text-center text-sm">
+			<p>© <span id="year"></span> Green Earth. All rights reserved.</p>
+		</div>
+	</footer>
+
+	<!-- Modal -->
+	<dialog id="plant-modal" class="modal">
+		<div class="modal-box">
+			<h3 id="modal-title" class="font-bold text-lg">Plant Details</h3>
+			<div id="modal-content" class="py-4"></div>
+			<div class="modal-action">
+				<form method="dialog">
+					<button class="btn">Close</button>
+				</form>
+			</div>
+		</div>
+		<form method="dialog" class="modal-backdrop">
+			<button>close</button>
+		</form>
+	</dialog>
+
+	<script src="script.js"></script>
+</body>
+</html>

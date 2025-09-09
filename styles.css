@@ -18,3 +18,146 @@ html, body { background: #ffffff; }
 /* Decorative leaves positions */
 .leaf-left { position: absolute; left: 8px; top: 28px; width: 160px; }
 .leaf-right { position: absolute; right: 8px; top: 28px; width: 160px; }
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+	.banner-title { font-size: 24px; }
+	.banner-sub { font-size: 10px; }
+	.leaf-left, .leaf-right { display: none; }
+	
+	/* Mobile shop layout - stack vertically */
+	#shop .grid { grid-template-columns: 1fr !important; gap: 1rem; }
+	#shop aside { order: 2; }
+	#shop .lg\\:col-span-8 { order: 1; }
+	
+	/* Mobile cards - single column */
+	#cards-grid { grid-template-columns: 1fr !important; }
+	
+	/* Mobile cart - stack items vertically */
+	.cart-item { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+	.cart-item div { width: 100%; }
+	.cart-remove { align-self: flex-end; }
+	
+	/* Mobile modal - smaller and responsive */
+	.modal-box { margin: 1rem; max-width: calc(100vw - 2rem); }
+	.modal-img { height: 150px; }
+	
+	/* Mobile navbar */
+	#topnav .navbar { padding: 0.5rem 1rem; }
+	#topnav .brand { font-size: 14px; }
+	
+	/* Mobile about section */
+	#about .grid { grid-template-columns: 1fr; }
+	#about img { margin-bottom: 1rem; }
+	
+	/* Mobile impact stats */
+	#impact .grid { grid-template-columns: 1fr; }
+	
+	/* Mobile plant form */
+	#plant .grid { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 768px) {
+	.banner-title { font-size: 36px; }
+	.banner-sub { font-size: 12px; }
+	.leaf-left { left: 24px; width: 220px; }
+	.leaf-right { right: 24px; width: 220px; }
+}
+
+/* Banner: keep decorative images only; no color wash over page */
+.banner-bg { background: #ffffff; }
+
+/* Card image */
+.card-img { width: 100%; height: 180px; object-fit: cover; border-radius: 0.75rem; }
+
+/* Card look like mock */
+.card { border: 1px solid hsl(var(--b2)); box-shadow: none; }
+.card .btn.btn-primary { background: #1f7a3b; border: none; }
+.card .btn.btn-primary:hover { filter: brightness(0.95); }
+.badge.badge-neutral { background: #e7f3ea; color: #1f7a3b; border: none; }
+
+/* Card text should be black (except badges/buttons) */
+#shop .card .card-body,
+#shop .card .card-body h2,
+#shop .card .card-body p,
+#shop .card .card-body span { color: #0b0b0b; }
+#shop .plant-name { color: #0b0b0b !important; text-decoration: none; }
+#shop .card .card-actions .btn { color: #ffffff; }
+
+/* Sidebar categories */
+.category-item {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.5rem 0.75rem;
+	border-radius: 0.5rem;
+	border: 1px solid hsl(var(--b3));
+	background: hsl(var(--b1));
+	font-size: 0.95rem;
+	cursor: pointer;
+	transition: background .15s ease, color .15s ease;
+}
+.category-item:hover { background: hsl(var(--b2)); }
+.category-item.active { background: #1f7a3b !important; color: #ffffff !important; border-color: #1f7a3b !important; }
+.category-item.active:hover { background: #1b6a33 !important; }
+.category-item.active:focus, .category-item.active:active { background: #1f7a3b !important; color: #ffffff !important; }
+
+/* Sidebar categories active bar */
+.category-item { position: relative; color: #0b0b0b; }
+.category-item.active::before { content: ""; position: absolute; left: -8px; top: 6px; bottom: 6px; width: 4px; border-radius: 9999px; background: hsl(var(--p)); }
+
+/* Cart list items */
+.cart-item { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; background: #f4f8f5; border-radius: 0.5rem; padding: 0.45rem 0.6rem; border: 1px solid hsl(var(--b2)); }
+.cart-item-title { font-weight: 600; color: #0b0b0b; }
+.cart-item span { color: #0b0b0b; }
+.cart-remove { background: transparent; border: none; color: #0b0b0b; cursor: pointer; }
+
+/* Modal content image */
+.modal-img { width: 100%; height: 220px; object-fit: cover; border-radius: 0.75rem; }
+
+/* Card action button compact like screenshot */
+.card .btn.btn-primary.btn-sm { height: 2rem; min-height: 2rem; font-size: 0.85rem; }
+
+/* Boxes are white */
+.stat, #shop aside { background: #ffffff; }
+.stat { border: 1px solid hsl(var(--b2)); box-shadow: none; text-align: center; }
+.stat .stat-value { color: #1f7a3b; }
+.stat .stat-title { color: #1f2d1f; }
+
+/* Section backgrounds follow mint; inner boxes remain white */
+#about { background: #ffffff !important; }
+#shop { background: #ffffff !important; }
+#impact { background: #d9f0e3 !important; }
+#impact h2 { color: #0b0b0b; }
+#plant { background: #14532d !important; }
+#plant h2 { color: #ffffff; }
+#pledge-form { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); }
+#plant .input.input-bordered { background: rgba(255,255,255,0.95); color: #0b0b0b; }
+#donate-btn { background: #ffcc33 !important; color: #1a1a1a !important; border: none !important; }
+#donate-btn:hover { background: #e6b82e !important; }
+
+/* Sidebars use white */
+#shop aside { background: #ffffff !important; border: 1px solid hsl(var(--b2)); }
+
+/* Ensure key texts are black in shop section */
+#shop h2,
+#shop aside h3,
+#shop aside p { color: #0b0b0b; }
+
+/* Footer background mint */
+footer { background: #0f3d22 !important; color: #ffffff; }
+footer p { color: #ffffff; }
+
+/* Ensure About section text is black */
+#about h2,
+#about h3,
+#about p,
+#about li { color: #0b0b0b; }
+
+/* Exact navbar styling */
+#topnav { background: #1f7a3b; }
+#topnav .navbar { min-height: 44px; height: 44px; color: #ffffff; }
+#topnav .brand { color: #ffffff; font-weight: 600; font-size: 12px; }
+#topnav .menu.menu-horizontal > li > a { color: #ffffff; font-size: 10px; padding-left: 12px; padding-right: 12px; }
+#topnav .cta { background: #ffcc33; color: #1a1a1a; border: none; border-radius: 9999px; height: 28px; min-height: 28px; line-height: 1; padding: 0 14px; font-size: 10px; }
+#topnav .dropdown .menu { background: #1f7a3b; color: #ffffff; }
