@@ -27,8 +27,9 @@ html, body { background: #ffffff; }
 	
 	/* Mobile shop layout - stack vertically */
 	#shop .grid { grid-template-columns: 1fr !important; gap: 1rem; }
-	#shop aside { order: 2; }
-	#shop .lg\\:col-span-8 { order: 1; }
+	#shop aside:first-of-type { order: 1; } /* Categories sidebar first */
+	#shop .lg\\:col-span-8 { order: 2; } /* Cards section second */
+	#shop aside:last-of-type { order: 3; } /* Cart sidebar last */
 	
 	/* Mobile cards - single column */
 	#cards-grid { grid-template-columns: 1fr !important; }
