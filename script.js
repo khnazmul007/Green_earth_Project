@@ -168,3 +168,12 @@ function renderCart() {
 		list.appendChild(li);
 	});
 }
+
+// Form
+function initForm() { const form = $('#pledge-form'); if (!form) return; form.addEventListener('submit', (e) => { e.preventDefault(); const formData = new FormData(form); const name = formData.get('name'); const email = formData.get('email'); const count = Number(formData.get('count')) || 1; alert(`Thank you, ${name}! Your pledge for ${count} tree(s) has been received. We'll contact you at ${email}.`); form.reset(); }); }
+function setYear() { const yearEl = $('#year'); if (yearEl) yearEl.textContent = String(new Date().getFullYear()); }
+
+// App init
+async function init() { setYear(); initForm(); await loadCategories(); }
+
+document.addEventListener('DOMContentLoaded', init);
